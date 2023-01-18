@@ -55,3 +55,9 @@ span.register{
     color: white;
 
 }
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
