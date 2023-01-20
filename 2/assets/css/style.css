@@ -1,0 +1,151 @@
+body {
+    font-family: sans-serif;
+    color:white;
+    background: black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1024px;
+}
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+.display {
+    width:fit-content;
+    height:fit-content;
+    position:relative;
+    max-width: 50%;
+}
+.display img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+section:first-of-type .display video{
+    position:absolute;
+    left: 12%;
+    top: 20%;
+    width: 76%;
+    height: auto;
+    z-index: -1;
+}
+
+section:nth-of-type(2) .row {
+    flex-direction: row-reverse;
+}
+
+section:last-of-type .display video{
+    position:absolute;
+    left: 18%;
+    top: 10%;
+    height:auto;
+    width:64%;
+    z-index: -1;
+}
+
+section .display .downloading {
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    height: 20%;
+    width: 65%;
+    transform: translate(-50%, 0);
+    border: 2px solid rgb(106, 106, 106);
+    padding: 0.75em;
+    border-radius: 10px;
+    background: rgba(0,0,0,1);
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    align-items: center;
+    z-index: 1;
+}
+
+.downloading img {
+    width: auto;
+    height: 100%;
+
+    margin-right: 10px;
+}
+
+.downloading .info {
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.downloading .info p {
+    margin: 0;
+}
+
+.downloading .info span {
+    color: rgb(61, 132, 255)
+}
+
+
+
+.downloading .progress {
+    width: 3em;
+}
+.downloading .progress img{
+    max-width: 3em;
+    height: auto;
+    text-align: center;
+}
+
+section div {
+    width: 50%;
+}
+
+section {
+    border-bottom: 0.5em solid #222222;
+    padding: 4em;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight:200;
+}
+
+.copy{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    section .row {
+        flex-direction: column !important;
+    }
+    .row div, .display {
+        width: 100%;
+        max-width:100%;
+    }
+    .copy h2, .copy p {
+        margin: 0px;
+        text-align: center;
+    }
+    .copy h2 {
+        font-size: 2em;
+    }
+    .copy p {
+        font-size: 1em;
+    }
+
+}
